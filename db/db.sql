@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 12, 2018 at 10:25 AM
+-- Generation Time: Mar 12, 2018 at 04:09 PM
 -- Server version: 5.7.21-0ubuntu0.17.10.1
 -- PHP Version: 7.1.11-0ubuntu0.17.10.1
 
@@ -37,6 +37,14 @@ CREATE TABLE `file` (
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `file`
+--
+
+INSERT INTO `file` (`id`, `name`, `utilisateur_id`, `link`, `date`, `status`) VALUES
+(16, 'C:fakepathcmi_f8edf9c1.png', 1, 'b13bde8f9b8531599712b8774f254699.png', '2018-03-12', 'valide'),
+(17, 'C:fakepathcmi_f8edf9c1.png', 1, 'cfe1fd7c8b3ef8b63782409a99a8b3a2.png', '2018-03-12', 'valide');
+
 -- --------------------------------------------------------
 
 --
@@ -49,6 +57,14 @@ CREATE TABLE `utilisateur` (
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id`, `name`, `password`, `email`) VALUES
+(1, 'public', 'public', 'public.raclette@meow.fr'),
+(2, 'Meow', 'haaaaa@f.fr', 'loooool');
 
 --
 -- Indexes for dumped tables
@@ -75,12 +91,12 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --

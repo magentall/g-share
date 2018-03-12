@@ -9,7 +9,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class=""  method="post">
+          <form class=""  method="post" action="controller/testForm.php">
 
               <div class="col-6 offset-3 text-center">Pseudo:
                   <input type="text" name="nom" placeholder="Pseudo">
@@ -35,8 +35,9 @@
            <a href="#" class="text-center col-4 offset-4">Oups Mot de passe perdu?</a>
        </div>
        <div class="modal-footer">
-          <button type="button" class="col-4 btn-success btn btn-default">S'inscrire</button>
+          <button type="submit" class="col-4 btn-success btn btn-default">S'inscrire</button>
        </div>
+          </form>
     </div>
   </div>
 </div>

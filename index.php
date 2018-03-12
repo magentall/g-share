@@ -1,6 +1,7 @@
 <?php
       include 'includes/header.php';
       include 'db/connectDB.php';
+      include 'db/gestionDB.php';
 ?>
 <title>We_Transfert</title>
 </head>
@@ -59,13 +60,13 @@
   </div>
   <div class="">
     <form class="" action="index.html" method="post">
-      <input class="col-4 offset-4 text-center" name="monFichier" type="file">
+      <input class="browse col-4 offset-4 text-center" name="monFichier" type="file">
       <button type="button" class="col-4 offset-4 btn-success btn btn-default">Upload</button>
     </form>
-      <p class="col-4 offset-4 text-center" id="lien">Lien:</p>
+      <p class="lien col-4 offset-4 text-center" >Votre Lien:<span class="text-center" id="lien">svdvdvdvdvdvd</span></p>
   </div>
   <div class="">
-      <p class="text-center col-4 offset-4">Liste de vos fichiers:</p>
+      <p class="text-center col-4 offset-4" id="fichiers">Liste de vos fichiers:</p>
   </div>
 
 

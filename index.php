@@ -62,7 +62,7 @@
       <input class="col-4 offset-4 text-center" name="monFichier" type="file">
       <button type="button" class="col-4 offset-4 btn-success btn btn-default">Upload</button>
     </form>
-      <p class="col-4 offset-4 text-center">Lien:</p>
+      <p class="col-4 offset-4 text-center" id="lien">Lien:</p>
   </div>
   <div class="">
       <p class="text-center col-4 offset-4">Liste de vos fichiers:</p>

@@ -18,6 +18,21 @@
         }
     }
 
+    function insertUser($name, $pwd, $email){
+
+        $connect = connectDB();
+        try{
+            $stmt = $connect->prepare("INSERT INTO utilisateur(name, password, email) VALUES('$name', '$pwd', '$email')");
+
+            $stmt->execute();
+        }
+        catch(PDOExeption $e){
+            $error = $e->getMessage();
+            messageErreur($error);
+        }
+
+    }
+
     function fileList($user_id){
 
         $connect = connectDB();

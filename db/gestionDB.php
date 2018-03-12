@@ -1,5 +1,4 @@
 <?php
-    //include 'connectDB.php';
     function fct_insert_file($name, $user_id){        
 
         $connect = connectDB();

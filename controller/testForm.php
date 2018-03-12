@@ -7,6 +7,8 @@
     $email = $_POST['mail'];
     $pwd = $_POST['password'];
 
+    $pwd = password_hash($pwd);
+
     insertUser($name, $email, $pwd);
 
     header('Location: ../index.php');

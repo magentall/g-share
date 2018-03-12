@@ -17,3 +17,20 @@
             messageErreur($error);
         }
     }
+
+    function fileList($user_id){
+
+        $connect = connectDB();
+
+        try{
+            $stmt = $connect->prepare("SELECT name, link, date, state FROM file WHERE utilisateur_id = '$user_id");
+
+            $stmt->execute();
+
+            
+        }
+        catch(PDOExeption $e){
+            $error = $e->getMessage();
+            messageErreur($error);
+        }
+    }

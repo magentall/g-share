@@ -15,11 +15,9 @@
   include 'includes/ModalConnexion.php';
   ?>
 
-  <div class="">
-    <form class="" action="upload_fichiers.php" method="post">
-      <input class="browse col-4 offset-4 text-center" name="monFichier" type="file">
-      <button type="button" class="col-4 offset-4 btn-success btn btn-default">Upload</button>
-    </form>
+  <div class="">  
+      <input class="browse col-4 offset-4 text-center" id="f" type="file">
+      <button type="button" class="col-4 offset-4 btn-success btn btn-default" onclick="upload_fichiers()">Upload</button>
   </div>
   <div class="">
       <span class="lien col-4 offset-4 text-center" >Votre Lien:<span class="text-center" id="lien"></span></span>

@@ -10,6 +10,6 @@ else {
   # utilisateur connecté
   $lien=fct_insert_file($_POST["monFichier"],$_POST["id"]);
   $('#lien').html($lien);
-}
+}html
 
  ?>

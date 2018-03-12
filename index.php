@@ -63,10 +63,12 @@
       <input class="browse col-4 offset-4 text-center" name="monFichier" type="file">
       <button type="button" class="col-4 offset-4 btn-success btn btn-default">Upload</button>
     </form>
-      <p class="lien col-4 offset-4 text-center" >Votre Lien:<span class="text-center" id="lien">svdvdvdvdvdvd</span></p>
   </div>
   <div class="">
-      <p class="text-center col-4 offset-4" id="fichiers">Liste de vos fichiers:</p>
+      <span class="lien col-4 offset-4 text-center" >Votre Lien:<span class="text-center" id="lien"></span></span>
+  </div>
+  <div class="">
+      <span class="text-center col-4 offset-4" id="fichiers">Liste de vos fichiers:</span>
   </div>
 
 

@@ -1,15 +1,22 @@
 <?php
-  include 'db/gestionDB.php';
+echo "yes";
+ include '../db/connectDB.php'
+ include '../db/gestionDB.php';
+
+  $temp=$_POST["idf"];
+  echo $temp;
+//  $lien = fct_insert_file($temp,1);
+
 // check si l'utilisateur est log
-if ($_POST["id"]==null) {
+if ($_POST["id"]==1) {
   # utilisateur non connecté
-  $lien=fct_insert_file($_POST["monFichier"],1);
+  echo fct_insert_file($_POST["idf"],1);
   //$('#lien').html($lien);
 }
 else {
   # utilisateur connecté
-  $lien=fct_insert_file($_POST["monFichier"],$_POST["id"]);
+  echo fct_insert_file($_POST["idf"],$_POST["id"]);
   //$('#lien').html($lien);
-}
+}*/
 
  ?>

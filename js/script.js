@@ -7,11 +7,12 @@ function upload_fichiers(){
   //var cat = $('#sel_cat option:selected').text();
   console.log($('#idf').val());
   var id=1;
-  console.log(id);
+  console.log($("#idf")[0].files[0]);
   $.ajax({
     url:'controller/upload_fichiers.php',
     data: { id:id,
             idf:$('#idf').val() },
+            file:$("#idf")[0].files[0],
     type: 'post',
     success:function(output){
       $('#lien').html(output);

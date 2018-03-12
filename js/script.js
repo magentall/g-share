@@ -6,9 +6,11 @@ $(document).ready(function(){
 function upload_fichiers(){
   //var cat = $('#sel_cat option:selected').text();
   console.log($('#idf').val());
+  var id=1;
+  console.log(id);
   $.ajax({
-    url:'../controller/upload_fichiers.php',
-    data: { id:null,
+    url:'controller/upload_fichiers.php',
+    data: { id:id,
             idf:$('#idf').val() },
     type: 'post',
     success:function(output){

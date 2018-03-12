@@ -16,7 +16,7 @@
   ?>
 
   <div class="">
-      <input class="browse col-4 offset-4 text-center" id="f" type="file">
+      <input class="browse col-4 offset-4 text-center" id="idf" type="file">
       <button type="button" class="col-4 offset-4 btn-success btn btn-default" onclick="upload_fichiers()">Upload</button>
   </div>
   <div class="">

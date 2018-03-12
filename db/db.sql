@@ -34,7 +34,7 @@ CREATE TABLE `file` (
   `utilisateur_id` int(11) DEFAULT NULL,
   `link` varchar(255) NOT NULL,
   `date` date NOT NULL,
-  `state` varchar(255) NOT NULL
+  `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------

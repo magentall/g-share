@@ -6,7 +6,7 @@
         $link = md5(time()).$extension;
 
         try{
-            $stmt = $connect->prepare("INSERT INTO file(name, utilisateur_id, link, date, state) VALUES('$name', '$user_id', '$link', NOW(), 'valide')");
+            $stmt = $connect->prepare("INSERT INTO file(name, utilisateur_id, link, date, status) VALUES('$name', '$user_id', '$link', NOW(), 'valide')");
 
             $stmt->execute();
 

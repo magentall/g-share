@@ -1,4 +1,7 @@
-<?php include 'includes/header.php' ?>
+<?php
+      include 'includes/header.php';
+      include 'db/connectDB.php';
+?>
 <title>We_Transfert</title>
 </head>
 <body>
@@ -14,51 +17,55 @@
 
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header">
-          <p class="text-center col-4 offset-4">Pour S'inscrire</p>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-         <form class=""  method="post">
-           <input class="text-center col-4 offset-4" type="text" name="nom" placeholder="Nom">
-           <input class="text-center col-4 offset-4" type="text" name="mail" placeholder="Mail">
-           <input class="text-center col-4 offset-4" type="text" name="password" placeholder="Password">
-         </form>
-         <a href="#" class="text-center col-4 offset-4">Oups Mot de passe perdu?</a>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="col-4 btn-success btn btn-default">S'inscrire</button>
-        </div>
+          <div class="modal-header">
+              <p class="text-center col-4 offset-4">Pour S'inscrire</p>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form class=""  method="post">
+                <input class="text-center col-4 offset-4" type="text" name="nom" placeholder="Nom">
+                <input class="text-center col-4 offset-4" type="text" name="mail" placeholder="Mail">
+                <input class="text-center col-4 offset-4" type="text" name="password" placeholder="Password">
+             </form>
+             <a href="#" class="text-center col-4 offset-4">Oups Mot de passe perdu?</a>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="col-4 btn-success btn btn-default">S'inscrire</button>
+         </div>
       </div>
     </div>
   </div>
   <!-- Modal connexion -->
   <div id="connexionmodal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+      <div class="modal-dialog">
 
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <p class="text-center col-4 offset-4">Pour Se connecter</p>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-         <form class=""  method="post">
-           <input class="text-center col-4 offset-4" type="text" name="mail" placeholder="mail">
-           <input class="text-center col-4 offset-4" type="text" name="password" placeholder="password">
-         </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="col-4 btn-success btn btn-default">Connexion</button>
-        </div>
+        <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header">
+                  <p class="text-center col-4 offset-4">Pour Se connecter</p>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                 <form class=""  method="post">
+                     <input class="text-center col-4 offset-4" type="text" name="mail" placeholder="mail">
+                     <input class="text-center col-4 offset-4" type="text" name="password" placeholder="password">
+                 </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="col-4 btn-success btn btn-default">Connexion</button>
+              </div>
+          </div>
       </div>
-    </div>
-  </div>
-    <button type="button" class="col-4 offset-4 btn-success btn btn-default">Upload</button>
-    <p class="col-4 offset-4 text-center">Lien:</p>
   </div>
   <div class="">
-     <p class="text-center col-4 offset-4">Liste de vos fichiers:</p>
+    <form class="" action="index.html" method="post">
+      <input class="col-4 offset-4 text-center" name="monFichier" type="file">
+      <button type="button" class="col-4 offset-4 btn-success btn btn-default">Upload</button>
+    </form>
+      <p class="col-4 offset-4 text-center">Lien:</p>
+  </div>
+  <div class="">
+      <p class="text-center col-4 offset-4">Liste de vos fichiers:</p>
   </div>
 
 

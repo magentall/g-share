@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 12, 2018 at 09:42 AM
+-- Generation Time: Mar 12, 2018 at 10:25 AM
 -- Server version: 5.7.21-0ubuntu0.17.10.1
 -- PHP Version: 7.1.11-0ubuntu0.17.10.1
 
@@ -32,7 +32,9 @@ CREATE TABLE `file` (
   `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `utilisateur_id` int(11) DEFAULT NULL,
-  `link` varchar(255) NOT NULL
+  `link` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `state` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -44,7 +46,8 @@ CREATE TABLE `file` (
 CREATE TABLE `utilisateur` (
   `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --

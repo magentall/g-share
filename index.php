@@ -2,7 +2,7 @@
       include 'includes/header.php';
       include 'db/connectDB.php';
       include 'db/gestionDB.php';
-      include 'includes/verifco.php';
+
 
 
 ?>

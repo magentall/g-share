@@ -27,7 +27,9 @@
   	</form>
   </div>
   <div class="">
-      <span class="lien col-4 offset-4 text-center" >Votre Lien:<span class="text-center" id="lien"></span></span>
+        <span class="lien col-4 offset-4 text-center" >Votre Lien:
+            <a href="#" target="_blank" class="text-center" id="lien"></a>
+        </span>
   </div>
   <div class="">
       <span class="text-center col-4 offset-4" id="fichiers">Liste de vos fichiers:</span>

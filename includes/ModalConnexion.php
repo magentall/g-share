@@ -9,7 +9,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-               <form class=""  method="post" action="includes/verifco.php">
+               <form class=""  method="post" action="controller/cnx-ajax.php"> <!-- action="includes/verifco.php">-->
                  <div class="col-6 offset-3 text-center">Mail:
                      <input class="text-center" type="text" name="email" placeholder="Mail">
                  </div>

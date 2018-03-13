@@ -9,7 +9,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class=""  method="post" onSubmit="return validation(this)"  action="controller/testForm.php">
+          <form class=""  method="post" onSubmit="return validation(this)" action="controller/insc-ajax.php"> <!-- action="controller/testForm.php">-->
 
               <div class="col-6 offset-3 text-center">Pseudo:
                   <input class="text-center" type="text" name="nom" placeholder="Pseudo">

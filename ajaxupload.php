@@ -1,26 +1,35 @@
 <?php
 
+include 'db/connectDB.php';
+include 'db/gestionDB.php';
 
 
-	include 'db/connectDB.php';
+$path = 'uploads/'; // upload directory
 
-	include 'db/gestionDB.php';
+if(isset($_FILES['file']))
+{
+	$file = $_FILES['file']['name'];
+	$tmp = $_FILES['file']['tmp_name'];
+	$id = 1;
+
+
+	$link =  fct_insert_file($file, $id);
+	$path = $path.strtolower($link);
+
+	$linkup = 'http://'.$_SERVER['HTTP_HOST']."/".$path;
 
 
 
-	$path = 'uploads/'; // upload directory
+		if(move_uploaded_file($tmp,$path))
+		{
 
+			echo $linkup;
 
-	if(isset($_FILES['file']))
+		}
+	else
 	{
-		$file = $_FILES['file']['name'];
-		$tmp = $_FILES['file']['tmp_name'];
-		$id = $_POST["id"];
-		$id = 1;
-		$link =  fct_insert_file($file, $id);
-		$path = $path.strtolower($link);
-		move_uploaded_file($tmp, $path);
-		echo "<img src='$path' />";
-		echo "<a href=".$path.">Lien</a>";
+		echo 'invalid';
 	}
+}
+
 ?>

@@ -24,11 +24,11 @@ if(isset($_FILES['file']))
 
 		if(move_uploaded_file($tmp,$path))
 		{
-			echo "<img src='$path' />";
+			//echo "<img src='$path' />";
 			echo fct_insert_file($path, 1);
-			echo "<p>
+			/*echo "<p>
 			".$path."
-			</p>";
+			</p>";*/
 		}
 	else
 	{

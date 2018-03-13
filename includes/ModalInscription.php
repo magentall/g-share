@@ -22,12 +22,12 @@
               <span id="Mail_Error"></span>
 
               <div class="col-6 offset-3 text-center">Password:
-                  <input type="text" name="password" placeholder="Password">
+                  <input type="password" name="password" placeholder="Password">
               </div>
               <span id="Password_Error"></span>
 
               <div class="col-6 offset-3 text-center">Password Verif:
-                  <input type="text" name="passwordVerif" placeholder="Re Password">
+                  <input type="password" name="passwordVerif" placeholder="Re Password">
               </div>
               <span id="Password_Error"></span>
 

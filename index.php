@@ -21,8 +21,7 @@
 
   <div class="">
     <form id="form" action="ajaxupload.php" method="post" enctype="multipart/form-data">
-  		<input id="uploadImage" class="browse col-4 offset-4 text-center" type="file" accept="image/*" name="file" />
-      <a href="#"><div class="col-4 offset-4" id="preview"><img src="no-image.jpg" /></div></a>
+  		<input id="upload" class="browse col-4 offset-4 text-center" type="file"  name="file" />
   		<button  id="button" class="col-4 offset-4 btn-success btn btn-default" type="submit" value="Upload">Upload</button>
   	</form>
   </div>

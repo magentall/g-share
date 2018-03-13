@@ -26,5 +26,11 @@
       <span class="text-center col-4 offset-4" id="fichiers">Liste de vos fichiers:</span>
   </div>
 
+  <div id="preview"><img src="no-image.jpg" /></div>
+
+  <form id="form" action="ajaxupload.php" method="post" enctype="multipart/form-data">
+		<input id="uploadImage" type="file" accept="image/*" name="image" />
+		<input id="button" type="submit" value="Upload">
+	</form>
 
 <?php include 'includes/footer.php' ?>

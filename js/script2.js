@@ -12,7 +12,7 @@ $(document).ready(function (e) {
 			beforeSend : function()
 			{
 				//$("#preview").fadeOut();
-				$("#err").fadeOut();
+				$("#title").fadeOut();
 			},
 			success: function(data)
 		    {

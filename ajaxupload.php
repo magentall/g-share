@@ -6,10 +6,10 @@ include 'db/gestionDB.php';
 //$valid_extensions = array('jpeg', 'jpg', 'png', 'gif', 'bmp'); // valid extensions
 $path = 'uploads/'; // upload directory
 
-if(isset($_FILES['image']))
+if(isset($_FILES['file']))
 {
-	$img = $_FILES['image']['name'];
-	$tmp = $_FILES['image']['tmp_name'];
+	$img = $_FILES['file']['name'];
+	$tmp = $_FILES['file']['tmp_name'];
 
 	// get uploaded file's extension
 	$ext = strtolower(pathinfo($img, PATHINFO_EXTENSION));

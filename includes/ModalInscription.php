@@ -9,7 +9,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class=""  method="post" action="controller/testForm.php">
+          <form class=""  method="post" onSubmit="return validation(this)"  action="controller/testForm.php">
 
               <div class="col-6 offset-3 text-center">Pseudo:
                   <input type="text" name="nom" placeholder="Pseudo">
@@ -31,7 +31,6 @@
               </div>
               <span id="Password_Error"></span>
 
-           </form>
            <a href="#" class="text-center col-4 offset-4">Oups Mot de passe perdu?</a>
        </div>
        <div class="modal-footer">

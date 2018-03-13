@@ -1,5 +1,5 @@
 function validation(f) {
-  if (f.mdp1.value == '' || f.mdp2.value == '') {
+  if (f.mdp1.value == '' || f.mdp2.value == ''|| f.mail.value == ''|| f.nom.value == '') {
     alert('Tous les champs ne sont pas remplis');
     f.mdp1.focus();
     return false;

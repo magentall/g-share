@@ -2,6 +2,9 @@
       include 'includes/header.php';
       include 'db/connectDB.php';
       include 'db/gestionDB.php';
+      include 'includes/verifco.php';
+
+
 ?>
 <title>We_Transfert</title>
 </head>
@@ -13,7 +16,7 @@
     Vous avez la possibilité de vous inscrire, de vous connecter et de vous déconnecter.<br><br> Un utilisateur connecté peut uploader des fichiers de 7Mo max, les durées de vie des fichiers passe à 24h.<br><br> N'hesitez pas à nous rejoindre <span class="argent">(pour seulement 5.000€/mois)</span> afin de trouver spritualité et bonheur.<br><br> Gouroux Mac nous laveras de nos pechés et nous accompagneras dans l'au dela.<br><br> Gloire a Gourou Mac notre maitre spirituel a tous.
   </div>
 
-  <button id="login" type="button" class="hover col-4 offset-4  btn btn-primary btn-lg" data-toggle="modal" data-target="#connexionmodal">Log In</button>
+  <button id="login" type="button" class="hover col-4 offset-4  btn btn-primary" data-toggle="modal" data-target="#connexionmodal">Log In</button>
   <?php
   include 'includes/ModalInscription.php';
   include 'includes/ModalConnexion.php';

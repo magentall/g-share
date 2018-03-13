@@ -24,7 +24,10 @@ $(document).ready(function (e) {
 				else
 				{
 					// view uploaded file.
-					$("#preview").html(data).fadeIn();
+					//$("#preview").html(data).fadeIn();
+					$("#lien").html(data).fadeIn();
+					$("#lien").attr("href", data);
+
 					$("#form")[0].reset();
 				}
 		    },

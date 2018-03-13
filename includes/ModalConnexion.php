@@ -11,19 +11,19 @@
             <div class="modal-body">
                <form class=""  method="post">
                  <div class="col-6 offset-3 text-center">Mail:
-                     <input type="text" name="mail" placeholder="Mail">
+                     <input class="text-center" type="text" name="mail" placeholder="Mail">
                  </div>
                  <span id="Mail_Error"></span>
 
                  <div class="col-6 offset-3 text-center">Password:
-                     <input type="password" name="password" placeholder="Password">
+                     <input class="text-center" type="password" name="password" placeholder="Password">
                  </div>
                  <span id="Password_Error"></span>
                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="col-4 btn-success btn btn-default">Connexion</button>
-                <button type="button" class="col-4 offset-2 btn btn-info btn-default" data-toggle="modal" data-target="#inscriptionmodal" data-dismiss="modal">Inscription</button>
+                <button type="button" class="col-6 btn-success btn btn-default">Connexion</button>
+                <button type="button" class="col-6  btn btn-info btn-default" data-toggle="modal" data-target="#inscriptionmodal" data-dismiss="modal">Inscription</button>
             </div>
         </div>
     </div>

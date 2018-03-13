@@ -5,10 +5,9 @@
 
     $name = $_POST['nom'];
     $email = $_POST['mail'];
-    $pwd = $_POST['password'];
+    $pwd = password_hash($_POST['mdp1'], PASSWORD_DEFAULT);
 
-    $pwd = password_hash($pwd);
 
-    insertUser($name, $email, $pwd);
+    insertUser($name, $pwd, $email);
 
     header('Location: ../index.php');

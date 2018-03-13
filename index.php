@@ -11,13 +11,13 @@
     <body>
 
         <?php
-            if(isset($_POST['err'])){
-              echo "Mot de passe erroné";
+            if(isset($_GET['err'])){
+              echo "<script>alert('Mot de passe erroné'')</script>";
             }
 
-            if(isset($_POST['id'])){
-              $_SESSION["id"] = $_POST['id'];
-              echo "salut";
+            if(isset($_GET['id'])){
+              $_SESSION["id"] = $_GET['id'];
+              echo "<h2>Bienvenue à toi jeune disciple.</h2>";
             }
         ?>
 

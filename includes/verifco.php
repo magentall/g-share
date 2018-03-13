@@ -24,12 +24,13 @@
 
     if (!$pwdVerif)
     {
-        echo 'Mauvais identifiant ou mot de passe !';
+        header('Location: ../index.php?err=1');
+
     }
     else
     {
         if ($pwdVerif) {
-        
+
             session_start();
             $_SESSION['id'] = $resultat['id'];
             $_SESSION['email'] = $email;
@@ -38,7 +39,7 @@
         }
         else {
             //echo 'Mauvais identifiant ou mot de passe !';
-            header('Location: ../index.php.err=1');
+            header('Location: ../index.php?err=1');
         }
     }
 

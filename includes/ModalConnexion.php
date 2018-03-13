@@ -22,8 +22,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="submit" class="col-6 btn-success btn btn-default">Connexion</button>
-                <button type="button" class="col-6  btn btn-info btn-default" data-toggle="modal" data-target="#inscriptionmodal" data-dismiss="modal">Inscription</button>
+                <button type="submit" class="col-6 btn-primary btn btn-default">Connexion</button>
+                <button type="button" class="col-6  btn btn-success btn-default" data-toggle="modal" data-target="#inscriptionmodal" data-dismiss="modal">Inscription</button>
             </div>
             </form>
         </div>

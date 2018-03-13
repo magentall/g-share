@@ -10,7 +10,7 @@
             </div>
             <div class="modal-body">
                <form class=""  method="post">
-                 <div class="col-6 offset-3 text-center">Pseudo:
+                 <div class="col-6 offset-3 text-center">Mail:
                      <input type="text" name="mail" placeholder="Mail">
                  </div>
                  <span id="Mail_Error"></span>

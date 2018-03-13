@@ -8,8 +8,11 @@
 <body>
 
   <!-- Trigger the modal with a button -->
+  <div id="title">
+    Uploadez-vos fichiers
+  </div>
 
-  <button type="button" class="col-4 offset-4  btn btn-primary btn-lg" data-toggle="modal" data-target="#connexionmodal">Log In</button>
+  <button id="login" type="button" class="col-4 offset-4  btn btn-primary btn-lg" data-toggle="modal" data-target="#connexionmodal">Log In</button>
   <?php
   include 'includes/ModalInscription.php';
   include 'includes/ModalConnexion.php';
@@ -29,6 +32,9 @@
       <span class="text-center col-4 offset-4" id="fichiers">Liste de vos fichiers:</span>
   </div>
 
+<div id="err" >
+
+</div>
 
 
 

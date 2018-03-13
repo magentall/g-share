@@ -29,7 +29,7 @@
   <div id="preview"><img src="no-image.jpg" /></div>
 
   <form id="form" action="ajaxupload.php" method="post" enctype="multipart/form-data">
-		<input id="uploadImage" type="file" accept="image/*" name="image" />
+		<input id="uploadImage" type="file" name="image" />
 		<input id="button" type="submit" value="Upload">
 	</form>
 

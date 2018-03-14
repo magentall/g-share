@@ -31,7 +31,7 @@
               </div>
               <span id="Password_Error"></span>
 
-           <a href="#" class="text-center col-4 offset-4">Oups Mot de passe perdu?</a>
+
        </div>
        <div class="modal-footer">
          <button type="button" class="hover col-6 btn btn-default btn-primary" data-toggle="modal" data-target="#connexionmodal" data-dismiss="modal">Log In</button>

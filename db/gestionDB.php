@@ -59,3 +59,20 @@
             messageErreur($error);
         }
     }
+
+    function selectEmail($id){
+      $connect = connectDB();
+
+      try{
+          $stmt = $connect->prepare("SELECT name FROM utilisateur WHERE id='$id'");
+          $stmt->execute();
+          $stmt->setFetchMode(PDO::FETCH_ASSOC);
+          while($row = $stmt->fetch()) {  $email = $row['name']; }
+          return $email;
+      }
+      catch(PDOExeption $e){
+          $error = $e->getMessage();
+          messageErreur($error);
+      }
+
+    }

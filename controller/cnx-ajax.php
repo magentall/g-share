@@ -5,7 +5,7 @@ include '../db/gestionDB.php';
 $email = $_POST['email'];
 $pwd = $_POST['password'];
 
-
+/*
 
 $connect = connectDB();
 //  Récupération de l'utilisateur et de son pass hashé
@@ -17,11 +17,15 @@ $connect = connectDB();
 
 
     $pwdVerif = password_verify($pwd, $resultat);
-
+*/
 
 // Comparaison du pass envoyé via le formulaire avec la base
-$isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
+$isPasswordCorrect = 1; // password_verify($_POST['password'], $resultat['password']);
 
-$tabData=[$isPasswordCorrect,]
+$email = 'temp';
+$id = 40;
+
+$tabData=[$isPasswordCorrect,$id,$email];
+echo json_encode($tabData);
 
 ?>

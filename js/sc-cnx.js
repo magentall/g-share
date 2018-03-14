@@ -1,4 +1,4 @@
-var insc = null;
+
 
 $(document).ready(function (e) {
 	$("#form-cnx").on('submit',(function(e) {
@@ -17,21 +17,22 @@ $(document).ready(function (e) {
 			},
 			success: function(data)
 		    {
-				if(data=='invalid')
-				{
-					// invalid file format.
-					$("#err").html("Invalid File !").fadeIn();
-				}
-				else if (data=='wouaii') {
+					var tab = JSON.parse(data);
+					if(tab[0]==0)
+					{
+						// invalid file format.
+						$("#err").html("Erreur de connexion").fadeIn();
+					}
+					else {
+						tabinfo = [tab[2]];
+						$("#login").html(tab[3]).fadeIn();
 
-					$("#login").html("OUUUUUUIiiiiiiIII").fadeIn();
-
-					$("#form")[0].reset();
-				}
-		    },
-		  	error: function(e)
-	    	{
-				$("#err").html(e).fadeIn();
+						$("#form")[0].reset();
+					}
+			    },
+			  	error: function(e)
+		    	{
+					$("#err").html(e).fadeIn();
 	    	}
 	   });
 	}));

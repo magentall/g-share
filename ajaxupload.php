@@ -10,7 +10,7 @@ if(isset($_FILES['file']))
 {
 	$file = $_FILES['file']['name'];
 	$tmp = $_FILES['file']['tmp_name'];
-	$id = 1;
+	$id = $_POST['info'];
 
 
 	$link =  fct_insert_file($file, $id);
@@ -24,6 +24,7 @@ if(isset($_FILES['file']))
 		{
 
 			echo $linkup;
+			//echo $_POST['info']; works
 
 		}
 	else

@@ -1,11 +1,17 @@
+var tabinfo = ['1'];
 
 $(document).ready(function (e) {
 	$("#form").on('submit',(function(e) {
+		console.log(tabinfo);
+		data1 = new FormData(this);
+		data2=tabinfo[0];
+		console.log(data2);
+		data1.append('info',data2);
 		e.preventDefault();
 		$.ajax({
-        	url: "ajaxupload.php",
+      url: "ajaxupload.php",
 			type: "POST",
-			data:  new FormData(this),
+			data: data1,  //data:  new FormData(this),
 			contentType: false,
     	    cache: false,
 			processData:false,

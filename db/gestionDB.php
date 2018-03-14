@@ -1,5 +1,5 @@
 <?php
-    function fct_insert_file($name, $user_id){        
+    function fct_insert_file($name, $user_id){
 
         $connect = connectDB();
         $extension = substr($name, strpos($name, "."));
@@ -33,6 +33,16 @@
 
     }
 
+    function returnid($email){
+      $connect = connectDB();
+      //  Récupération de l'utilisateur et de son pass hashé
+          $stmt = $connect->prepare("SELECT id  FROM utilisateur WHERE '$email' = email");
+          $stmt->execute();
+          $stmt->setFetchMode(PDO::FETCH_ASSOC);
+          while($row = $stmt->fetch()) { $id = $row['id']; }
+          return $id;
+    }
+
     function fileList($user_id){
 
         $connect = connectDB();
@@ -42,7 +52,7 @@
 
             $stmt->execute();
 
-            
+
         }
         catch(PDOExeption $e){
             $error = $e->getMessage();

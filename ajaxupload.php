@@ -10,7 +10,13 @@ if(isset($_FILES['file']))
 {
 	$file = $_FILES['file']['name'];
 	$tmp = $_FILES['file']['tmp_name'];
+	$size = $_FILES['file']['size'];
 	$id = 1;
+
+	if($size > 3145728 && $id == 1){
+		echo "3 Mo max";
+		exit();
+	}
 
 
 	$link =  fct_insert_file($file, $id);

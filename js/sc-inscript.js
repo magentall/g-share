@@ -21,13 +21,11 @@ $(document).ready(function (e) {
 					// invalid file format.
 					$("#err").html("Invalid File !").fadeIn();
 				}
-				else
-				{
-					// view uploaded file.
-					//$("#preview").html(data).fadeIn();
-					$("#login").html(data).fadeIn();
-					//$("#lien").attr("href", data);
-
+				else if (data=='wouaii') {
+					insc=1;
+					$("#login").html("INSC").fadeIn();
+					$('#inscriptionmodal').toggle();
+					$('#connexionmodal').toggle();
 					$("#form")[0].reset();
 				}
 		    },

@@ -1,5 +1,5 @@
 <!-- Modal inscription-->
-<div id="inscriptionmodal" class="modal fade" role="dialog">
+<div id="inscriptionmodal"  class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -9,7 +9,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class=""  method="post" onSubmit="return validation(this)" action="controller/testForm.php">
+          <form id="form-insc" class=""  method="post" onSubmit="return validation(this)" action="controller/insc-ajax.php"> <!-- action="controller/testForm.php">-->
 
               <div class="col-6 offset-3 text-center">Pseudo:
                   <input class="text-center" type="text" name="nom" placeholder="Pseudo">
@@ -31,7 +31,7 @@
               </div>
               <span id="Password_Error"></span>
 
-
+           <a href="#" class="text-center col-4 offset-4">Oups Mot de passe perdu?</a>
        </div>
        <div class="modal-footer">
          <button type="button" class="hover col-6 btn btn-default btn-primary" data-toggle="modal" data-target="#connexionmodal" data-dismiss="modal">Log In</button>

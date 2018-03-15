@@ -81,9 +81,10 @@
         $connect = connectDB();
 
         try{
-            $stmt = $connect->prepare("SELECT name, link, date, state FROM file WHERE utilisateur_id = '$user_id");
+            $stmt = $connect->prepare("SELECT name, link, date, status FROM file WHERE utilisateur_id = '$user_id'");
 
             $stmt->execute();
+            return $stmt;
 
 
         }

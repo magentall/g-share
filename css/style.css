@@ -25,4 +25,10 @@
 button, .browse {
   cursor: pointer; }
 
+.souligner {
+  text-decoration: underline; }
+
+.top {
+  margin-top: 20px; }
+
 /*# sourceMappingURL=style.css.map */

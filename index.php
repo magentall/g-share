@@ -20,6 +20,8 @@
 
               $name = selectEmail($_GET['id']);
               echo "<h2>Bienvenue à toi jeune disciple $name.</h2>";
+
+
             }
         ?>
 
@@ -48,13 +50,23 @@
         </div>
         <div class="">
             <span class="text-center col-6 offset-3" id="fichiers">Liste de vos fichiers:</span>
+              <ul class="row">
+                <?php
+                  // if(isset($_SESSION["id"])){
+
+                    $stmt = fileList($_GET['id']);
+                   $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                    while($row = $stmt->fetch()) {
+                       echo "<li class='col-12 col-lg-3 top '>".
+                                "<span class='souligner'> nom du fichier : "."</span>". $row['name'] ."<br>". " <span class='souligner'> lien : "."</span>".$row['link'] ."<br>". "<span class='souligner'> date d'upload : " ."</span>". $row['date'] ."<br>". "<span class='souligner'> état : " ."</span>". $row['status'] .
+                            "</li>";
+                   }
+                  // }
+                ?>
+                </ul>
         </div>
 
       <div id="err" >
 
       </div>
-
-
-
-
 <?php include 'includes/footer.php' ?>

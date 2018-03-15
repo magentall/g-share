@@ -41,6 +41,9 @@
         <div class="">
           <form id="form" action="ajaxupload.php" method="post" enctype="multipart/form-data">
             <input id="upload" class="browse col-6 offset-3 text-center" type="file"  name="file" />
+            <div class="col-6 offset-3 text-center" id="err" >
+
+            </div>
             <button  id="button" class="col-6 offset-3 btn-success btn btn-default" type="submit" value="Upload">Upload</button>
           </form>
         </div>
@@ -68,7 +71,5 @@
                 </ul>
         </div>
 
-      <div id="err" >
 
-      </div>
 <?php include 'includes/footer.php' ?>

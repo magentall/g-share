@@ -24,8 +24,8 @@ $(document).ready(function (e) {
 						$("#err").html("Erreur de connexion").fadeIn();
 					}
 					else {
-						tabinfo = [tab[2]];
-						$("#login").html(tab[3]).fadeIn();
+						tabinfo = [tab[1]];
+						$("#login").html(tab[2]).fadeIn();
 
 						$("#form")[0].reset();
 					}

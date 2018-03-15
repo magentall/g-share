@@ -17,6 +17,7 @@ if(isset($_FILES['file']))
 		exit();
 	}elseif ($size > 7 340 032) {
 		echo " 7Mo maximum ";
+		exit();
 	}
 
 

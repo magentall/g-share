@@ -1,19 +1,37 @@
 <?php
     function delete_file(){
-      $connect = connectDB();
-      $stmt = $connect->prepare("SELECT link FROM file WHERE DATEDIFF(CURDATE(), date) < 24 AND id='1'") ;
 
+<<<<<<< HEAD
       $stmt2 = $connect->prepare("SELECT link FROM file WHERE DATEDIFF(CURDATE(), date) < 24 AND id!='1'");
+=======
+      $root = 'http://'.$_SERVER['HTTP_HOST']."/We_Transfert/uploads/";
 
-       $stmt->execute();
-       $table = array();
+      $connect = connectDB();
+      $stmt = $connect->prepare("SELECT link,id FROM file WHERE DATEDIFF(minute, CURDATE(), date) < 10 AND id='1'");
+>>>>>>> ba8363d446ad48748b88c7492100ff60b23743d6
 
-       $stmt->setFetchMode(PDO::FETCH_ASSOC);
-       $i = 0;
+      $stmt->execute();
+      $table = array();
 
-       while($row = $stmt->fetch()) {
-           $table[$i] = $row['url'];
+      $stmt->setFetchMode(PDO::FETCH_ASSOC);
+      $i = 0;
+
+      while($row = $stmt->fetch()) {
+           $table[$i] = $root.$row['url'];
            unlink($table[$i]);
+           $i++;
+      }
+
+      $stmt2 = $connect->prepare("SELECT link,id FROM file WHERE DATEDIFF(minute, CURDATE(), date) < 1440 AND id!='1'");
+      $stmt2->execute();
+      $table2 = array();
+
+      $stmt2->setFetchMode(PDO::FETCH_ASSOC);
+      $i = 0;
+
+      while($row = $stmt2->fetch()) {
+           $table2[$i] = $root.$row['url'];
+           unlink($table2[$i]);
            $i++;
       }
     }

@@ -20,7 +20,7 @@
               $_SESSION["id"] = $_GET['id'];
 
               $name = selectEmail($_GET['id']);
-              echo "<h2 class='text-center nom'>Bonjour $name bienvenue dans la matrice.</h2>";
+              echo "<h2 class='text-center nom'>Bonjour $name bienvenue.</h2>";
 
 
             }
@@ -28,8 +28,8 @@
 
         <!-- Trigger the modal with a button -->
         <div class="marg1 col-6 offset-3 text-center" >
-          Bienvenue sur Gourou Uploads vous avez la possibilité d'upload n'importe quel type de fichier (taille maximale : 3Mo) et obtenir en retour un lien pouvant être partagé et qui permet de downloader le fichier en question. Un fichier uploadé est supprimé 10 minutes après son upload. Donc le lien ne serat plus valide.
-          Vous avez la possibilité de vous inscrire, de vous connecter et de vous déconnecter. Un utilisateur connecté peut uploader des fichiers de 7Mo max, les durées de vie des fichiers passent à 24h.
+          Bienvenue sur We Transfert vous avez la possibilité d'upload n'importe quel type de fichier (taille maximale : 3Mo) et obtenir en retour un lien pouvant être partagé et qui permet de downloader le fichier en question. Un fichier uploadé est supprimé 10 minutes après son upload. Donc le lien ne serat plus valide.
+          Vous avez la possibilité de vous inscrire, de vous connecter et de vous déconnecter. Un utilisateur connecté peut uploader des fichiers de 7Mo max,et les durées de vie des fichiers passent à 24h.
         </div>
 
 
@@ -54,7 +54,7 @@
               </span>
         </div>
         <div class="container">
-            <span class="souligner bold text-center col-6 offset-3" id="fichiers">Liste de vos fichiers:</span>
+            <span class="souligner bold text-center col-4 offset-4" id="fichiers">Liste de vos fichiers:</span>
               <ul class=" row">
                 <?php
                   if(isset($_GET["id"])){

@@ -25,7 +25,7 @@
         ?>
 
         <div class="">
-          <form id="form" action="controller/ajaxupload2.php" method="post" enctype="multipart/form-data">
+          <form id="form" action="ajaxupload2.php" method="post" enctype="multipart/form-data">
             <input id="upload" class="browse col-4 offset-4 text-center" type="file"  name="file" />
             <button  id="button" class="col-4 offset-4 btn-success btn btn-default" type="submit" value="Upload">Upload</button>
           </form>
@@ -41,6 +41,9 @@
 
       <div id="err" >
 
+      </div>
+
+      <div id="post">
       </div>
 
 

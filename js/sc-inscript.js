@@ -27,7 +27,7 @@ $(document).ready(function (e) {
 					else if (tab[0]=='wouaii') {
 						insc=1;
 						$("#login").html(tab[1]).fadeIn();
-						//$('#inscriptionmodal').toggle();
+						$('#inscriptionmodal').modal('hide');
 						tabinfo = [tab[3]];
 						$("#form")[0].reset();
 					}

@@ -1,8 +1,24 @@
 var tabinfo = ['1'];
 
+//Affichage général
+function ajax_aff_history(){
+	$.ajax({
+		url:'past.php',
+		data: { id:tabinfo[0]
+		},
+		type: 'post',
+		success:function(output){
+			console.log(output);
+			$('#post').html(output);
+		}
+	});
+}
 
 
 $(document).ready(function (e) {
+
+ajax_aff_history();
+
 
 	$("#form").on('submit',(function(e) {
 		console.log(tabinfo);

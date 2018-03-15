@@ -17,7 +17,9 @@ $(document).ready(function (e) {
 			},
 			success: function(data)
 		    {
+					console.log(data);
 					var tab = JSON.parse(data);
+					console.log(tab);
 					if(tab[0]==0)
 					{
 						// invalid file format.
@@ -26,7 +28,7 @@ $(document).ready(function (e) {
 					else {
 						tabinfo = [tab[1]];
 						$("#login").html(tab[2]).fadeIn();
-
+						$('#connexionmodal').modal('hide');
 						$("#form")[0].reset();
 					}
 			    },

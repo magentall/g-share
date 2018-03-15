@@ -1,5 +1,5 @@
 <!-- Modal inscription-->
-<div id="inscriptionmodal"  class="modal fade" role="dialog">
+<div id="inscriptionmodal"  class="modal fade" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
 
     <!-- Modal content-->

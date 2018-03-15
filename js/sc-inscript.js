@@ -16,23 +16,27 @@ $(document).ready(function (e) {
 			},
 			success: function(data)
 		    {
-				if(data=='invalid')
-				{
-					// invalid file format.
-					$("#err").html("Invalid File !").fadeIn();
-				}
-				else if (data=='wouaii') {
-					insc=1;
-					$("#login").html("INSC").fadeIn();
-					$('#inscriptionmodal').toggle();
-					$('#connexionmodal').toggle();
-					$("#form")[0].reset();
-				}
-		    },
+					var tab = JSON.parse(data);
+					console.log(tab[1]);
+					console.log(tab[2]);
+					console.log(tab[3]);
+					if (tab[0]=='invalid') {
+						// invalid file format.
+						$("#err").html("Invalid File !").fadeIn();
+					}
+					else if (tab[0]=='wouaii') {
+						insc=1;
+						$("#login").html(tab[1]).fadeIn();
+						//$('#inscriptionmodal').toggle();
+						tabinfo = [tab[3]];
+						$("#form")[0].reset();
+					}
+
+			},
 		  	error: function(e)
 	    	{
 				$("#err").html(e).fadeIn();
-	    	}
+			}
 	   });
 	}));
 });

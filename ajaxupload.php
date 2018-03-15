@@ -10,8 +10,7 @@ if(isset($_FILES['file']))
 {
 	$file = $_FILES['file']['name'];
 	$tmp = $_FILES['file']['tmp_name'];
-	$size = $_FILES['file']['size'];
-	$id = 1;
+	$id = $_POST['info'];
 
 	if($size > 3145728 && $id == 1){
 		echo "3 Mo max";
@@ -30,6 +29,7 @@ if(isset($_FILES['file']))
 		{
 
 			echo $linkup;
+			//echo $_POST['info']; works
 
 		}
 	else

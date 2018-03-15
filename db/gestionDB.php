@@ -33,6 +33,16 @@
 
     }
 
+    function returnid($email){
+      $connect = connectDB();
+      //  Récupération de l'utilisateur et de son pass hashé
+          $stmt = $connect->prepare("SELECT id  FROM utilisateur WHERE '$email' = email");
+          $stmt->execute();
+          $stmt->setFetchMode(PDO::FETCH_ASSOC);
+          while($row = $stmt->fetch()) { $id = $row['id']; }
+          return $id;
+    }
+
     function fileList($user_id){
 
         $connect = connectDB();

@@ -1,4 +1,23 @@
 <?php
+    function delete_file(){
+      $connect = connectDB();
+      $stmt = $connect->prepare("SELECT link FROM file WHERE DATEDIFF(CURDATE(), date) < 24 AND id='1'") ;
+
+      $stmt2 = $connect->prepare("SELECT link FROM file WHERE DATEDIFF(CURDATE(), date) < 24 AND id!='1'")
+
+       $stmt->execute();
+       $table = array();
+
+       $stmt->setFetchMode(PDO::FETCH_ASSOC);
+       $i = 0;
+
+       while($row = $stmt->fetch()) {
+           $table[$i] = $row['url'];
+           unlink($table[$i]);
+           $i++;
+      }
+    }
+
     function fct_insert_file($name, $user_id){
 
         $connect = connectDB();

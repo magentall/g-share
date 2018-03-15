@@ -13,9 +13,9 @@ if(isset($_FILES['file']))
 	$id = $_POST['info'];
 
 	if($size > 3145728 && $id == 1){
-		echo " 3Mo max ";
+		echo " 3Mo maximum ";
 		exit();
-	}elseif ($size > 7 340 032) {
+	}elseif ($size > 7340032) {
 		echo " 7Mo maximum ";
 		exit();
 	}

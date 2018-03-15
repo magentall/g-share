@@ -5,7 +5,7 @@
       <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <p class="text-center col-4 offset-4">Pour Se connecter</p>
+                <p class="bleu text-center col-4 offset-4">Pour Se connecter</p>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
@@ -19,7 +19,7 @@
                      <input class="text-center" type="password" name="password" placeholder="Password">
                  </div>
                  <span id="Password_Error"></span>
-                 <a href="#" class="text-center col-4 offset-4">Oups Mot de passe perdu?</a>
+                 <a href="#" class="text-center col-4 offset-4 bleu">Oups Mot de passe perdu?</a>
             </div>
             <div class="modal-footer">
                 <button type="submit" class="col-6 btn-primary btn btn-default">Connexion</button>

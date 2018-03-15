@@ -5,7 +5,7 @@
     <!-- Modal content-->
     <div class="modal-content">
         <div class="modal-header">
-            <p class="text-center col-4 offset-4">Pour S'inscrire</p>
+            <p class="bleu text-center col-4 offset-4">Pour S'inscrire</p>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">

@@ -35,7 +35,7 @@
        </div>
        <div class="modal-footer">
          <button type="button" class="hover col-6 btn btn-default btn-primary" data-toggle="modal" data-target="#connexionmodal" data-dismiss="modal">Log In</button>
-          <button type="submit" class="col-6 btn-success btn btn-default">S'inscrire</button>
+          <button type="submit" class="col-6 btn-success btn btn-default"  >S'inscrire</button>
        </div>
           </form>
     </div>

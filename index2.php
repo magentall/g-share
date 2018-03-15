@@ -6,20 +6,11 @@
 
 
 ?>
+
         <title>We_Transfert</title>
     </head>
     <body>
 
-        <?php
-            if(isset($_GET['err'])){
-              echo "<script>alert('Mot de passe erroné'')</script>";
-            }
-
-            if(isset($_GET['id'])){
-              $_SESSION["id"] = $_GET['id'];
-              echo "<h2>Bienvenue à toi jeune disciple.</h2>";
-            }
-        ?>
 
         <!-- Trigger the modal with a button -->
         <div class="col-4 offset-4 text-center" id="title">
@@ -34,7 +25,7 @@
         ?>
 
         <div class="">
-          <form id="form" action="ajaxupload.php" method="post" enctype="multipart/form-data">
+          <form id="form" action="controller/ajaxupload2.php" method="post" enctype="multipart/form-data">
             <input id="upload" class="browse col-4 offset-4 text-center" type="file"  name="file" />
             <button  id="button" class="col-4 offset-4 btn-success btn btn-default" type="submit" value="Upload">Upload</button>
           </form>
@@ -55,4 +46,4 @@
 
 
 
-<?php include 'includes/footer.php' ?>
+<?php include 'includes/footer2.php' ?>

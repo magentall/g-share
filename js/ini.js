@@ -3,12 +3,6 @@ var tabinfo = ['1'];
 
 
 $(document).ready(function (e) {
-	/*$.get("index.php", function(data){
-		console.log(data);
-		if (data!=null) {
-			tabinfo = [data];
-		}
-	});*/
 
 	$("#form").on('submit',(function(e) {
 		console.log(tabinfo);
@@ -18,7 +12,7 @@ $(document).ready(function (e) {
 		data1.append('info',data2);
 		e.preventDefault();
 		$.ajax({
-      url: "ajaxupload.php",
+      url: "ajaxupload2.php",
 			type: "POST",
 			data: data1,  //data:  new FormData(this),
 			contentType: false,

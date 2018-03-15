@@ -1,14 +1,14 @@
 <?php
     function delete_file(){
 
-<<<<<<< HEAD
+
       $stmt2 = $connect->prepare("SELECT link FROM file WHERE DATEDIFF(CURDATE(), date) < 24 AND id!='1'");
-=======
+
       $root = 'http://'.$_SERVER['HTTP_HOST']."/We_Transfert/uploads/";
 
       $connect = connectDB();
       $stmt = $connect->prepare("SELECT link,id FROM file WHERE DATEDIFF(minute, CURDATE(), date) < 10 AND id='1'");
->>>>>>> ba8363d446ad48748b88c7492100ff60b23743d6
+
 
       $stmt->execute();
       $table = array();

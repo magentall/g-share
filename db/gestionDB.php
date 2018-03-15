@@ -4,7 +4,7 @@
       $root = 'http://'.$_SERVER['HTTP_HOST']."/We_Transfert/uploads/";
 
       $connect = connectDB();
-      $stmt = $connect->prepare("SELECT link FROM file WHERE DATEDIFF(minute, CURDATE(), date) < 10 AND id='1'");
+      $stmt = $connect->prepare("SELECT link,id FROM file WHERE DATEDIFF(minute, CURDATE(), date) < 10 AND id='1'");
 
       $stmt->execute();
       $table = array();
@@ -18,7 +18,7 @@
            $i++;
       }
 
-      $stmt2 = $connect->prepare("SELECT link FROM file WHERE DATEDIFF(minute, CURDATE(), date) < 1440 AND id!='1'");
+      $stmt2 = $connect->prepare("SELECT link,id FROM file WHERE DATEDIFF(minute, CURDATE(), date) < 1440 AND id!='1'");
       $stmt2->execute();
       $table2 = array();
 

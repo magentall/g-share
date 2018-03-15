@@ -52,7 +52,7 @@
             <span class="text-center col-6 offset-3" id="fichiers">Liste de vos fichiers:</span>
               <ul class="row">
                 <?php
-                  // if(isset($_SESSION["id"])){
+                  if(isset($_GET["id"])){
 
                     $stmt = fileList($_GET['id']);
                    $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -61,7 +61,7 @@
                                 "<span class='souligner'> nom du fichier : "."</span>". $row['name'] ."<br>". " <span class='souligner'> lien : "."</span>".$row['link'] ."<br>". "<span class='souligner'> date d'upload : " ."</span>". $row['date'] ."<br>". "<span class='souligner'> état : " ."</span>". $row['status'] .
                             "</li>";
                    }
-                  // }
+                  }
                 ?>
                 </ul>
         </div>

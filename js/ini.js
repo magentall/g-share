@@ -18,7 +18,7 @@ function ajax_aff_history(){
 $(document).ready(function (e) {
 
 ajax_aff_history();
-
+$("#legal").fadeIn(); // to update w anim
 
 	$("#form").on('submit',(function(e) {
 		console.log(tabinfo);
@@ -37,7 +37,7 @@ ajax_aff_history();
 			beforeSend : function()
 			{
 				//$("#preview").fadeOut();
-				$("#title").fadeOut();
+				$("#legal").fadeOut();
 			},
 			success: function(data)
 		    {

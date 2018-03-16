@@ -1,0 +1,26 @@
+db724098523
+
+db724098523.db.1and1.com
+
+3306
+
+dbo724098523
+
+
+
+    Serveur:
+    home331219340.1and1-data.host
+    Port:
+    22
+    Protocole:
+    SFTP
+    Nom d'utilisateur:
+    u58886288-bd_cv
+    Mot de passe:
+    ******  Bi........v..e1....*
+    Notes personnelles:
+    bd_cv
+    Dossier:
+    /bd_cv
+
+

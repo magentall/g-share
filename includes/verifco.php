@@ -19,7 +19,10 @@
 
 
     // Comparaison du pass envoyé via le formulaire avec la base
-    $isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
+    //$isPasswordCorrect = password_verify($_POST['password'], $resultat['password']); pb de passage de tableau -> $var
+    $p1=$_POST['password'];
+    $p2=$resultat;
+    $isPasswordCorrect = password_verify($p1,$p2);
     echo $isPasswordCorrect;
 
     if (!$pwdVerif)

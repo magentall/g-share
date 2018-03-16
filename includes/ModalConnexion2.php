@@ -1,5 +1,5 @@
 <!-- Modal connexion -->
-<div id="connexionmodal"  class="modal fade" role="dialog">
+<div id="connexionmodal"  class="modal fade" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
 
       <!-- Modal content-->

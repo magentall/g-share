@@ -11,11 +11,12 @@ if(isset($_FILES['file']))
 	$file = $_FILES['file']['name'];
 	$tmp = $_FILES['file']['tmp_name'];
 	$id = $_POST['info'];
+	$size = $_FILES['file']['size'];
 
 	if($size > 3145728 && $id == 1){
 		echo " 3Mo max ";
 		exit();
-	}elseif ($size > 7 340 032) {
+	}elseif ($size > 7340032) {
 		echo " 7Mo maximum ";
 		exit();
 	}

@@ -1,8 +1,24 @@
 var tabinfo = ['1'];
 
+//Affichage général
+function ajax_aff_history(){
+	$.ajax({
+		url:'past.php',
+		data: { id:tabinfo[0]
+		},
+		type: 'post',
+		success:function(output){
+			console.log(output);
+			$('#post').html(output);
+		}
+	});
+}
 
 
 $(document).ready(function (e) {
+
+ajax_aff_history();
+$("#legal").fadeIn(); // to update w anim
 
 	$("#form").on('submit',(function(e) {
 		console.log(tabinfo);
@@ -21,7 +37,7 @@ $(document).ready(function (e) {
 			beforeSend : function()
 			{
 				//$("#preview").fadeOut();
-				$("#title").fadeOut();
+				$("#legal").fadeOut();
 			},
 			success: function(data)
 		    {
@@ -36,8 +52,8 @@ $(document).ready(function (e) {
 					//$("#preview").html(data).fadeIn();
 					$("#lien").html(data).fadeIn();
 					$("#lien").attr("href", data);
-
 					$("#form")[0].reset();
+					ajax_aff_history();
 				}
 		    },
 		  	error: function(e)

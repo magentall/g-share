@@ -17,7 +17,9 @@ $connect = connectDB();
     $pwdVerif = password_verify($pwd, $resultat);
 
 // Comparaison du pass envoyé via le formulaire avec la base
-$isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
+$p1=$_POST['password'];
+$p2=$resultat;
+$isPasswordCorrect = password_verify($p1,$p2);
 
 $tabData=[$isPasswordCorrect,$id,$email];
 echo json_encode($tabData);

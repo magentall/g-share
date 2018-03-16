@@ -30,6 +30,7 @@ $(document).ready(function (e) {
 						$("#login").html(tab[2]).fadeIn();
 						$('#connexionmodal').modal('hide');
 						$("#form")[0].reset();
+						ajax_aff_history();
 					}
 			    },
 			  	error: function(e)

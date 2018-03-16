@@ -52,8 +52,8 @@ $("#legal").fadeIn(); // to update w anim
 					//$("#preview").html(data).fadeIn();
 					$("#lien").html(data).fadeIn();
 					$("#lien").attr("href", data);
-
 					$("#form")[0].reset();
+					ajax_aff_history();
 				}
 		    },
 		  	error: function(e)

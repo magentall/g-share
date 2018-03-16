@@ -30,6 +30,7 @@ $(document).ready(function (e) {
 						$('#inscriptionmodal').modal('hide');
 						tabinfo = [tab[3]];
 						$("#form")[0].reset();
+						ajax_aff_history();
 					}
 
 			},

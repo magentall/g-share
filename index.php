@@ -9,8 +9,8 @@
         <title>We_Transfert</title>
     </head>
     <body class="blanc ff">
-      <?php  if(!isset($_GET["id"])){echo '<button id="login" type="button" class="hover col-2 offset-5  btn btn-primary" data-toggle="modal" data-target="#connexionmodal">Log In</button>';}?>
-      <?php  if(isset($_GET["id"])){echo '<a  href="controller/deconnexion.php" class="btn btn-danger hover col-2 offset-5">Déconnexion</a>';}?>
+      <?php  if(!isset($_GET["id"])){echo '<button id="login" type="button" class="hover col-12  btn btn-primary" data-toggle="modal" data-target="#connexionmodal">Log In</button>';}?>
+      <?php  if(isset($_GET["id"])){echo '<a  href="controller/deconnexion.php" class="btn btn-danger hover col-12 ">Déconnexion</a>';}?>
         <?php
             if(isset($_GET['err'])){
               echo "<script>alert('Mot de passe erroné')</script>";
@@ -38,18 +38,19 @@
         include 'includes/ModalConnexion.php';
         ?>
 
-        <div class="">
-          <form id="form" action="ajaxupload.php" method="post" enctype="multipart/form-data">
-            <input id="upload" class="browse col-6 offset-3 text-center" type="file"  name="file" />
-            <div class="col-6 offset-3 text-center" id="err" >
+        <div class="container">
+          <div class="col-12 text-center" id="err" >
 
-            </div>
-            <button  id="button" class="col-6 offset-3 btn-success btn btn-default" type="submit" value="Upload">Upload</button>
+          </div>
+          <form id="form" class="row" action="ajaxupload.php" method="post" enctype="multipart/form-data">
+            <input id="upload" class="col-8 offset-1 browse btn btn-default btn-success " type="file"  name="file" />
+
+            <button  id="button" class="col-2 gg btn-success btn btn-default" type="submit" value="Upload">Upload</button>
           </form>
         </div>
 
         <div class="container">
-              <span class="bold souligner col-6 offset-3 " >Votre Lien:
+              <span class="bold lien souligner col-12 offset-1 " >Votre Lien:
                   <a href="#" target="_blank" class="" id="lien"></a>
               </span>
         </div>

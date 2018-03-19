@@ -9,7 +9,30 @@ function ajax_aff_history(){
 		type: 'post',
 		success:function(output){
 			//console.log(output);
-			$('#post').html(output);
+			var tabi = JSON.parse(output);
+			console.log(tabi);
+
+			$('#post').html();
+			for (var i in tabi) {
+				//if (tabi.hasOwnProperty(i)) {
+				var b=i;
+				console.log(i);
+				var a = "<p><a id='lk"+b+"'>link"+b+"</a></p>";
+				console.log(a);
+				var result = $(a);
+				console.log(result);
+				$('#post').append(result);
+				var link = "uploads/"+tabi[i].link;
+				console.log(link);
+				var idlk = "#lk"+i;
+				$(idlk).attr("href",link);
+				//}
+			}
+
+
+			//$('#post').attr('class','text-center');
+			//var link = tabi[0].link;
+
 		}
 	});
 }

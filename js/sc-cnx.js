@@ -3,7 +3,10 @@
 $(document).ready(function (e) {
 
 	$("#legal").click(function(){
+		tabinfo[0]=1;
 		$("#legal").html('U LogOut u can now close the tab');
+		$("#login").html('LoGaGain');
+		ajax_aff_history();
 	});
 
 	$("#form-cnx").on('submit',(function(e) {

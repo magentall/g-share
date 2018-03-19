@@ -14,18 +14,18 @@ function ajax_aff_history(){
 
 			$('#post').html();
 			for (var i in tabi) {
-				//if (tabi.hasOwnProperty(i)) {
-				var b=i;
-				console.log(i);
-				var a = "<p><a id='lk"+b+"'>link"+b+"</a></p>";
-				console.log(a);
-				var result = $(a);
-				console.log(result);
-				$('#post').append(result);
-				var link = "uploads/"+tabi[i].link;
-				console.log(link);
-				var idlk = "#lk"+i;
-				$(idlk).attr("href",link);
+			//	if (tabi[i].status=='valide') {
+					var b=i;
+					console.log(i);
+					var a = "<p class='text-center'><a id='lk"+b+"'>link "+b+" : name __ "+tabi[i].name+"  date__ "+tabi[i].date+"</a></p>";
+					console.log(a);
+					var result = $(a);
+					console.log(result);
+					$('#post').append(result);
+					var link = "uploads/"+tabi[i].link;
+					console.log(link);
+					var idlk = "#lk"+i;
+			  	$(idlk).attr("href",link);
 				//}
 			}
 

@@ -39,8 +39,10 @@
         </div>
 
 
-
-      <div id="post" class="col-12 mr-3 ml-3 mt-3 legal post">
+      <div class="container row">
+        <div id="post" class=" col-8 mr-3 ml-3 mt-3 legal post">
+        </div>
+        <div id="right" class="col-3 post"></div>
       </div>
 
 

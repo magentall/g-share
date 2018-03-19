@@ -1,6 +1,11 @@
 
 
 $(document).ready(function (e) {
+
+	$("#legal").click(function(){
+		$("#legal").html('U LogOut u can now close the tab');
+	});
+
 	$("#form-cnx").on('submit',(function(e) {
 		e.preventDefault();
 		$.ajax({
@@ -13,7 +18,7 @@ $(document).ready(function (e) {
 			beforeSend : function()
 			{
 				//$("#preview").fadeOut();
-				$("#title").fadeIn();
+
 			},
 			success: function(data)
 		    {
@@ -30,6 +35,9 @@ $(document).ready(function (e) {
 						$("#login").html(tab[2]).fadeIn();
 						$('#connexionmodal').modal('hide');
 						$("#form")[0].reset();
+						$("#legal").html('Clik here to LoGout');
+						$("#legal").fadeIn();
+						ajax_aff_history();
 					}
 			    },
 			  	error: function(e)

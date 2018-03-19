@@ -33,12 +33,13 @@ if(isset($_FILES['file']))
 		{
 
 			echo $linkup;
+
 			//echo $_POST['info']; works
 
 		}
 	else
 	{
-		echo 'invalid';
+		echo 'File none Valid';
 	}
 }
 

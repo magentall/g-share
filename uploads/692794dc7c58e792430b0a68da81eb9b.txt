@@ -1,0 +1,14 @@
+Base de données
+db724109913
+Description
+
+bd_blog
+Nom d'hôte
+
+db724109913.db.1and1.com
+Port
+3306
+Nom d'utilisateur
+dbo724109913
+Type et version
+MySQL 5.5

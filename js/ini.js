@@ -8,17 +8,26 @@ function ajax_aff_history(){
 		},
 		type: 'post',
 		success:function(output){
-			console.log(output);
+			//console.log(output);
 			$('#post').html(output);
 		}
 	});
 }
 
 
+
+
 $(document).ready(function (e) {
 
+	if (tabinfo[0]==1) {
+		$("#legal").fadeIn(); // to update w anim
+	}
+	else {
+		$("#legal").html('Clik here to LoGout');
+	}
+
 ajax_aff_history();
-$("#legal").fadeIn(); // to update w anim
+
 
 	$("#form").on('submit',(function(e) {
 		console.log(tabinfo);
@@ -36,15 +45,21 @@ $("#legal").fadeIn(); // to update w anim
 			processData:false,
 			beforeSend : function()
 			{
-				//$("#preview").fadeOut();
-				$("#legal").fadeOut();
+
+
 			},
 			success: function(data)
 		    {
 				if(data=='invalid')
 				{
 					// invalid file format.
-					$("#err").html("Invalid File !").fadeIn();
+					$("#err").html("Upload Size Limit").fadeIn();
+					if (data2==1) {
+						$("#legal").fadeIn(); // to update w anim
+					}
+					else {
+						$("#legal").html('Clik here to LoGout');
+					}
 				}
 				else
 				{
@@ -52,8 +67,14 @@ $("#legal").fadeIn(); // to update w anim
 					//$("#preview").html(data).fadeIn();
 					$("#lien").html(data).fadeIn();
 					$("#lien").attr("href", data);
-
 					$("#form")[0].reset();
+					ajax_aff_history();
+					if (data2==1) {
+							$("#legal").fadeOut();
+					}
+					else {
+						$("#legal").html('Clik here to LoGout');
+					}
 				}
 		    },
 		  	error: function(e)

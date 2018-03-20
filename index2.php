@@ -8,14 +8,13 @@
 
 
         <!-- Trigger the modal with a button -->
-        <div class="col-4 offset-4 text-center mt-3" id="legal">
-          <p class="legal">Bienvenue sur Gourou Uploads vous avez la possibilité d'uploader n'importe quel type de fichier (taille maximale : 3Mo) et obtenir en retour un lien pouvant être partagé et qui permet de downloader le fichier en question.
-          Un fichier uploadé est supprimé 10 minutes après son upload. Donc le lien ne serat plus valide.
-          Vous avez la possibilité de vous inscrire, de vous connecter et de vous déconnecter.
-          Un utilisateur connecté peut uploader des fichiers de 7Mo max, les durées de vie des fichiers passe à 24h.</p>
+        <div class="col-12 mr-3 ml-3 text-center mt-3" id="legal">
+          <p class="legal">Welcome to G Share SPA </p>
+          <p>You can here Uploads files. 10 min for less than 3 Mo or 7 Mo for 24 hours with ur mail</p>
+          <p>Files are none public if u LoGoN</p>
         </div>
 
-        <button id="login" type="button" class="mt-3 hover col-4 offset-4  btn btn-primary" data-toggle="modal" data-target="#connexionmodal">Log In</button>
+        <button id="login" type="button" class="mt-3 hover col-12 mr-3 ml-3  btn btn-primary" data-toggle="modal" data-target="#connexionmodal">Log In</button>
         <?php
         include 'includes/ModalInscription2.php';
         include 'includes/ModalConnexion2.php';
@@ -25,22 +24,25 @@
         </div>
         <div class="mt-3">
           <form id="form" action="ajaxupload2.php" method="post" enctype="multipart/form-data">
-            <input id="upload" class="browse col-4 offset-4 text-center" type="file"  name="file" />
-            <button  id="button" class="mt-3 col-4 offset-4 btn-success btn btn-default" type="submit" value="Upload">Upload</button>
+            <input id="upload" class="browse col-12 mr-3 ml-3 text-center" type="file"  name="file" />
+            <button  id="button" class="mt-3 col-12 mr-3 ml-3 btn-success btn btn-default" type="submit" value="Upload">Upload</button>
           </form>
         </div>
         <div class="mt-3">
-              <span class="lien col-4 offset-4 text-center" ><i class="fab fa-sellcast"></i>
+              <div class="lien col-12 mr-3 ml-3 text-center" >
+                <p><i class="fab fa-sellcast"></i></p>
                 <p>  <a href="#" target="_blank" class="text-center" id="lien"></a></p>
-              </span>
+              </div>
         </div>
         <div class="mt-3">
-            <span class="text-center col-4 offset-4" id="fichiers">Uploads -> </span>
+            <span class="text-center col-12 mr-3 ml-3" id="fichiers">Uploads -> </span>
         </div>
 
 
-
-      <div id="post" class="col-4 offset-4 mt-3 legal post">
+      <div class="container row">
+        <div id="post" class=" col-8 mr-3 ml-3 mt-3 legal post">
+        </div>
+        <div id="right" class="col-3 post"></div>
       </div>
 
 

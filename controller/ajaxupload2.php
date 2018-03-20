@@ -23,7 +23,7 @@ if(isset($_FILES['file']))
 	$link =  fct_insert_file($file, $id);
 	$path = $path.strtolower($link);
 
-	$linkup = 'http://'.$_SERVER['HTTP_HOST']."/We_Transfert/".$path;
+	$linkup = 'http://'.$_SERVER['HTTP_HOST']."/ProjetAformac/We_Transfert/".$path;
 
 
 

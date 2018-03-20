@@ -28,7 +28,7 @@
 
         <!-- Trigger the modal with a button -->
         <div class="marg1 col-6 offset-3 text-center" >
-          Bienvenue sur We Transfert vous avez la possibilité d'upload n'importe quel type de fichier (taille maximale : 3Mo) et obtenir en retour un lien pouvant être partagé et qui permet de downloader le fichier en question. Un fichier uploadé est supprimé 10 minutes après son upload. Donc le lien ne serat plus valide.
+          Bienvenue sur We Transfert vous avez la possibilité d'upload n'importe quel type de fichier (taille maximale : 3Mo) et obtenir en retour un lien pouvant être partagé et qui permet de download le fichier en question. Un fichier uploadé est supprimé 10 minutes après son upload. Donc le lien ne serat plus valide.
           Vous avez la possibilité de vous inscrire, de vous connecter et de vous déconnecter. Un utilisateur connecté peut uploader des fichiers de 7Mo max,et les durées de vie des fichiers passent à 24h.
         </div>
 

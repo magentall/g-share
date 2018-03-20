@@ -6,7 +6,7 @@ $(document).ready(function (e) {
 		tabinfo[0]=1;
 		$("#legal").html('U LogOut u can now close the tab');
 		$("#login").html('LoGaGain');
-		ajax_aff_history();
+		ajax_aff_history(tabinfo[0]);
 	});
 
 	$("#form-cnx").on('submit',(function(e) {

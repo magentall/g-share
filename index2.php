@@ -25,17 +25,15 @@
         include 'includes/ModalInscription2.php';
         include 'includes/ModalConnexion2.php';
         ?>
-        <div id="err" class="text-center mt-3">
-        </div>
-
         <div class="mt-3 col-sm-12 col-lg-8 ml-5 mr-5 text-center">
               <div class="lien text-center" >
             <!--    <p id="link_tit">: Ur Link Ready WOW :</p> -->
                 <p>  <a href="#" target="_blank" class="" id="lien"></a></p>
               </div>
         </div>
-        <div class="mt-3">
-
+        <div class="text-center mt-3 col-sm-12 col-lg-3">
+    <!--      <div id="err" class="mt-3">
+    </div>-->
         </div>
 
 

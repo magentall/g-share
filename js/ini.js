@@ -17,7 +17,7 @@ function ajax_aff_history(a){
 			var tabi = JSON.parse(output);
 			console.log(tabi);
 
-			$('#post').html();
+			$('#post').html('');
 			tabi.reverse();
 			console.log(tabi);
 			for (var i in tabi) {
@@ -80,37 +80,32 @@ ajax_aff_history(tabinfo[0]);
 			},
 			success: function(data)
 		    {
-					if(data=='invalid')
-					{
-						// invalid file format.
-						$("#err").html("LoAd a FilE").fadeIn();
+
 						if (data2==1) {
 							$("#legal").fadeIn(); // to update w anim
 						}
 						else {
 							$("#legal").html('Clik here to LoGout');
 						}
-					}
-					else
-					{
-						if (data=='3m') {
 
+						if (data=='3m') {
+							alert('Max 3 Mo');
 						}else if (data=='7m') {
+							alert('Max 7 Mo');
+						}
+						else if (data=='invalid') {
+							alert('InvaLid FilE');
 						}
 						else{
 
 							$("#lien").html(data).fadeIn();
 							$("#lien").attr("href", data);
 							$("#form")[0].reset();
+							$("#err").html('');
 							ajax_aff_history(tabinfo[0]);
-							if (data2==1) {
-									$("#legal").fadeOut();
-							}
-							else {
-								$("#legal").html('Clik here to LoGout');
-							}
+
 						}
-					}
+
 		    },
 		  	error: function(e)
 	    	{

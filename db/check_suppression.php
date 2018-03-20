@@ -1,5 +1,5 @@
 <?php
-/*
+
 foreach row
   if ($id==1) {
     # pour les utilisateurs publics

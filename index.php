@@ -44,6 +44,7 @@
           </div>
           <form id="form" class="row" action="ajaxupload.php" method="post" enctype="multipart/form-data">
             <input id="upload" class="col-8 offset-1 browse btn btn-default btn-success " type="file"  name="file" />
+            <input class="d-none" name="id" value=<?php echo $_GET['id'] ;?>>
 
             <button  id="button" class="col-2 gg btn-success btn btn-default" type="submit" value="Upload">Upload</button>
           </form>
@@ -64,7 +65,7 @@
                    $stmt->setFetchMode(PDO::FETCH_ASSOC);
                     while($row = $stmt->fetch()) {
                        echo "<li class='col-12 col-lg-6 top '>".
-                                "<span class='souligner'> nom du fichier : "."</span>". $row['name'] ."<br>". " <span class='souligner'> lien : "."</span>".$row['link'] ."<br>". "<span class='souligner'> date d'upload : " ."</span>". $row['date'] ."<br>". "<span class='souligner'> état : " ."</span>". $row['status'] .
+                                "<span class='souligner'> nom du fichier : "."</span>". $row['name'] ."<br>". " <span class='souligner'> lien :". "</span> <a href='uploads/".$row['link']."'> localhost/We_Transfert/uploads/".$row['link'] ."</a><br>". "<span class='souligner'> date d'upload : " ."</span>". $row['date'] ."<br>". "<span class='souligner'> état : " ."</span>". $row['status'] .
                             "</li>";
                    }
                   }

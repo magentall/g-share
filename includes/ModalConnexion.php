@@ -19,6 +19,7 @@
                      <input class="text-center" type="password" name="password" placeholder="Password">
                  </div>
                  <span id="Password_Error"></span>
+                 
                  <!-- <a href="#" class="text-center col-4 offset-4 bleu">Oups Mot de passe perdu?</a> -->
             </div>
             <div class="modal-footer">

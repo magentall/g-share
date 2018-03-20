@@ -40,7 +40,7 @@
 
         $connect = connectDB();
         $extension = substr($name, strpos($name, "."));
-        $link = md5(time()).$extension;
+        $link =  md5(time()).$extension;
 
         try{
             $stmt = $connect->prepare("INSERT INTO file(name, utilisateur_id, link, date, status) VALUES('$name', '$user_id', '$link', NOW(), 'valide')");

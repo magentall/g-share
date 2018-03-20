@@ -11,6 +11,7 @@ if(isset($_FILES['file']))
 	$file = $_FILES['file']['name'];
 	$tmp = $_FILES['file']['tmp_name'];
 	$id = 1;
+	$id = $_POST['id']; 
 
 
 	$link =  fct_insert_file($file, $id);

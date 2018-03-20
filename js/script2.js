@@ -1,4 +1,4 @@
-var tabinfo = ['1'];
+//var tabinfo = ['1'];
 
 
 
@@ -11,10 +11,13 @@ $(document).ready(function (e) {
 	});*/
 
 	$("#form").on('submit',(function(e) {
-		console.log(tabinfo);
+		//console.log(tabinfo);
 		data1 = new FormData(this);
-		data2=tabinfo[0];
-		console.log(data2);
+		//data2=tabinfo[0];
+		data2 = document.getElementsByName('id')[0].value;
+		if (data2 == ""){
+			data2 = 1;
+		}
 		data1.append('info',data2);
 		e.preventDefault();
 		$.ajax({

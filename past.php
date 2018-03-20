@@ -13,5 +13,6 @@ while($row = $stmt->fetch()) {
           array_push($tabi,$row);
 
 }
+//array_reverse($tabi);
 echo json_encode($tabi);
 ?>

@@ -1,29 +1,36 @@
 var tabinfo = ['1'];
 
 //Affichage général
-function ajax_aff_history(){
+function ajax_aff_history(a){
 	$.ajax({
 		url:'past.php',
-		data: { id:tabinfo[0]
+		data: { id:a
 		},
 		type: 'post',
+		beforeSend : function()
+		{
+			$("#err").html();
+
+		},
 		success:function(output){
 			//console.log(output);
 			var tabi = JSON.parse(output);
 			console.log(tabi);
 
 			$('#post').html();
+			tabi.reverse();
+			console.log(tabi);
 			for (var i in tabi) {
 			//	if (tabi[i].status=='valide') {
 					var b=i;
-					console.log(i);
-					var a = "<p class='text-center'><a id='lk"+b+"'>link "+b+" : name __ "+tabi[i].name+"  date__ "+tabi[i].date+"</a></p>";
-					console.log(a);
+					//console.log(i);
+					var a = "<p class='text-center link'><a id='lk"+b+"' target='_blank'>link "+b+" : name __ "+tabi[i].name+"  date__ "+tabi[i].date+"</a></p>";
+					//console.log(a);
 					var result = $(a);
-					console.log(result);
+					//console.log(result);
 					$('#post').append(result);
 					var link = "uploads/"+tabi[i].link;
-					console.log(link);
+					//console.log(link);
 					var idlk = "#lk"+i;
 			  	$(idlk).attr("href",link);
 				//}
@@ -49,7 +56,7 @@ $(document).ready(function (e) {
 		$("#legal").html('Clik here to LoGout');
 	}
 
-ajax_aff_history();
+ajax_aff_history(tabinfo[0]);
 
 
 	$("#form").on('submit',(function(e) {
@@ -73,37 +80,43 @@ ajax_aff_history();
 			},
 			success: function(data)
 		    {
-				if(data=='invalid')
-				{
-					// invalid file format.
-					$("#err").html("Upload Size Limit").fadeIn();
-					if (data2==1) {
-						$("#legal").fadeIn(); // to update w anim
+					if(data=='invalid')
+					{
+						// invalid file format.
+						$("#err").html("Upload Size Limit").fadeIn();
+						if (data2==1) {
+							$("#legal").fadeIn(); // to update w anim
+						}
+						else {
+							$("#legal").html('Clik here to LoGout');
+						}
 					}
-					else {
-						$("#legal").html('Clik here to LoGout');
+					else
+					{
+						if (data=='3m') {
+
+						}else if (data=='7m') {
+						}
+						else{
+
+							$("#lien").html(data).fadeIn();
+							$("#lien").attr("href", data);
+							$("#form")[0].reset();
+							ajax_aff_history(tabinfo[0]);
+							if (data2==1) {
+									$("#legal").fadeOut();
+							}
+							else {
+								$("#legal").html('Clik here to LoGout');
+							}
+						}
 					}
-				}
-				else
-				{
-					// view uploaded file.
-					//$("#preview").html(data).fadeIn();
-					$("#lien").html(data).fadeIn();
-					$("#lien").attr("href", data);
-					$("#form")[0].reset();
-					ajax_aff_history();
-					if (data2==1) {
-							$("#legal").fadeOut();
-					}
-					else {
-						$("#legal").html('Clik here to LoGout');
-					}
-				}
 		    },
 		  	error: function(e)
 	    	{
 				$("#err").html(e).fadeIn();
 	    	}
+
 	   });
 	}));
 });

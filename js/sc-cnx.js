@@ -20,7 +20,8 @@ $(document).ready(function (e) {
 			processData:false,
 			beforeSend : function()
 			{
-				//$("#preview").fadeOut();
+				$("#err").html();
+				$('#connexionmodal').modal('hide');
 
 			},
 			success: function(data)
@@ -31,7 +32,7 @@ $(document).ready(function (e) {
 					if(tab[0]==0)
 					{
 						// invalid file format.
-						$("#err").html("Erreur de connexion").fadeIn();
+						$("#err").html("Try aGain").fadeIn();
 					}
 					else {
 						tabinfo = [tab[1]];
@@ -40,7 +41,7 @@ $(document).ready(function (e) {
 						$("#form")[0].reset();
 						$("#legal").html('Clik here to LoGout');
 						$("#legal").fadeIn();
-						ajax_aff_history();
+						ajax_aff_history(tabinfo[0]);
 					}
 			    },
 			  	error: function(e)

@@ -13,6 +13,7 @@ $(document).ready(function (e) {
 			{
 				//$("#preview").fadeOut();
 				$("#title").fadeOut();
+				$("#err").html();
 			},
 			success: function(data)
 		    {
@@ -37,7 +38,8 @@ $(document).ready(function (e) {
 						$('#inscriptionmodal').modal('hide');
 						tabinfo = [tab[3]];
 						$("#form")[0].reset();
-						ajax_aff_history();
+						ajax_aff_history(tabinfo[0]);
+						//$("#login").add('disabled');
 					}
 
 			},

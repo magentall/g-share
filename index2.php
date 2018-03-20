@@ -6,46 +6,52 @@
 </head>
 <body>
 
-
+  <div class="container mr-5 ml-5 row"
         <!-- Trigger the modal with a button -->
-        <div class="col-12 mr-3 ml-3 text-center mt-3" id="legal">
-          <p class="legal">Welcome to G Share SPA </p>
-          <p>You can here Uploads files. 10 min for less than 3 Mo or 7 Mo for 24 hours with ur mail</p>
-          <p>Files are none public if u LoGoN</p>
+        <div class="col-12 text-center mt-3" id="legal">
+          <span class="legal">Welcome to G Share SPA // </span>
+          <span class="desc">You can here Uploads files. 10 min for less than 3 Mo or 7 Mo for 24 hours with ur mail</span>
+          <span class="plus">\\ Files are none public if u LoGoN</span>
         </div>
-
-        <button id="login" type="button" class="mt-3 hover col-12 mr-3 ml-3  btn btn-primary" data-toggle="modal" data-target="#connexionmodal">Log In</button>
-        <?php
-        include 'includes/ModalInscription2.php';
-        include 'includes/ModalConnexion2.php';
-        ?>
-        <div id="err" >
-
-        </div>
-        <div class="mt-3">
+        <div class="mt-3 col-sm-12 col-lg-8">
           <form id="form" action="ajaxupload2.php" method="post" enctype="multipart/form-data">
             <input id="upload" class="browse col-12 mr-3 ml-3 text-center" type="file"  name="file" />
             <button  id="button" class="mt-3 col-12 mr-3 ml-3 btn-success btn btn-default" type="submit" value="Upload">Upload</button>
           </form>
         </div>
-        <div class="mt-3">
-              <div class="lien col-12 mr-3 ml-3 text-center" >
-                <p><i class="fab fa-sellcast"></i></p>
-                <p>  <a href="#" target="_blank" class="text-center" id="lien"></a></p>
+
+        <button id="login" type="button" class="mt-3 hover col-sm-12 col-lg-3 mr-3 ml-3  btn btn-primary" data-toggle="modal" data-target="#connexionmodal">Log In</button>
+        <?php
+        include 'includes/ModalInscription2.php';
+        include 'includes/ModalConnexion2.php';
+        ?>
+        <div id="err" class="text-center mt-3">
+        </div>
+
+        <div class="mt-3 col-sm-12 col-lg-8 ml-5 mr-5 text-center">
+              <div class="lien text-center" >
+            <!--    <p id="link_tit">: Ur Link Ready WOW :</p> -->
+                <p>  <a href="#" target="_blank" class="" id="lien"></a></p>
               </div>
         </div>
         <div class="mt-3">
-            <span class="text-center col-12 mr-3 ml-3" id="fichiers">Uploads -> </span>
+
         </div>
 
 
-      <div class="container row">
-        <div id="post" class=" col-8 mr-3 ml-3 mt-3 legal post">
+      <div class="container mr-5 ml-5 row">
+        <div class="col-8">
+          <div class="text-center col-12 mr-3 ml-3 text-center" id="fichiers">Links</div>
+          <div id="post" class="legal pt-3 post mb-5">
+
+          </div>
         </div>
-        <div id="right" class="col-3 post"></div>
+        <div class="col-4">
+          <div id="right" class="mt-3 pt-3">
+
+          </div>
+        </div>
       </div>
 
-
-
-
       <?php include 'includes/footer2.php' ?>
+    </div>

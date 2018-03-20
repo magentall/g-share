@@ -22,7 +22,14 @@ $(document).ready(function (e) {
 					console.log(tab[3]);
 					if (tab[0]=='invalid') {
 						// invalid file format.
-						$("#err").html("Invalid File !").fadeIn();
+						$("#err").html("Inscription None Valid").fadeIn();
+
+						if (data2==1) {
+							$("#legal").fadeIn(); // to update w anim
+						}
+						else {
+							$("#legal").html('Clik here to LoGout');
+						}
 					}
 					else if (tab[0]=='wouaii') {
 						insc=1;

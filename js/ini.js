@@ -15,13 +15,13 @@ function ajax_aff_history(a){
 		success:function(output){
 			//console.log(output);
 			var tabi = JSON.parse(output);
-			console.log(tabi);
+			//console.log(tabi);
 
 			$('#post').html('');
 			tabi.reverse();
-			console.log(tabi);
+			//console.log(tabi);
 			for (var i in tabi) {
-			//	if (tabi[i].status=='valide') {
+
 					var b=i;
 					//console.log(i);
 					var a = "<p class='text-center link'><a id='lk"+b+"' target='_blank'>link "+b+" : name __ "+tabi[i].name+"  date__ "+tabi[i].date+"</a></p>";
@@ -33,13 +33,7 @@ function ajax_aff_history(a){
 					//console.log(link);
 					var idlk = "#lk"+i;
 			  	$(idlk).attr("href",link);
-				//}
 			}
-
-
-			//$('#post').attr('class','text-center');
-			//var link = tabi[0].link;
-
 		}
 	});
 }
@@ -60,10 +54,10 @@ ajax_aff_history(tabinfo[0]);
 
 
 	$("#form").on('submit',(function(e) {
-		console.log(tabinfo);
+		//console.log(tabinfo);
 		data1 = new FormData(this);
 		data2=tabinfo[0];
-		console.log(data2);
+		//console.log(data2);
 		data1.append('info',data2);
 		e.preventDefault();
 		$.ajax({
@@ -80,7 +74,7 @@ ajax_aff_history(tabinfo[0]);
 			},
 			success: function(data)
 		    {
-
+						console.log(data);
 						if (data2==1) {
 							$("#legal").fadeIn(); // to update w anim
 						}
@@ -109,7 +103,8 @@ ajax_aff_history(tabinfo[0]);
 		    },
 		  	error: function(e)
 	    	{
-				$("#err").html(e).fadeIn();
+					$("#err").html(e).fadeIn();
+//					console.log(e);
 	    	}
 
 	   });

@@ -6,6 +6,7 @@ include 'db/gestionDB.php';
 
 $path = 'uploads/'; // upload directory
 
+
 if(isset($_FILES['file']))
 {
 	$file = $_FILES['file']['name'];
@@ -13,10 +14,12 @@ if(isset($_FILES['file']))
 	$id = $_POST['info'];
 	$size = $_FILES['file']['size'];
 
+
+
 	if($size > 3145728 && $id == 1){
-		echo "3m";
+		echo '3m';
 	}elseif ($size > 7340032) {
-		echo "7m";
+		echo '7m';
 	}
 	else{
 		$link =  fct_insert_file($file, $id);
@@ -26,6 +29,7 @@ if(isset($_FILES['file']))
 		if(move_uploaded_file($tmp,$path))
 		{
 			echo $linkup;
+			echo $size;
 		}
 		else
 		{

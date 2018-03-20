@@ -83,7 +83,7 @@ ajax_aff_history(tabinfo[0]);
 					if(data=='invalid')
 					{
 						// invalid file format.
-						$("#err").html("Upload Size Limit").fadeIn();
+						$("#err").html("LoAd a FilE").fadeIn();
 						if (data2==1) {
 							$("#legal").fadeIn(); // to update w anim
 						}

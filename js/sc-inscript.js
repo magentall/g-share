@@ -1,7 +1,9 @@
 
 $(document).ready(function (e) {
+					//$("#lien").html();
 	$("#form-insc").on('submit',(function(e) {
 		e.preventDefault();
+						//$("#lien").html();
 		$.ajax({
         	url: "controller/insc-ajax.php",
 			type: "POST",
@@ -14,6 +16,7 @@ $(document).ready(function (e) {
 				//$("#preview").fadeOut();
 				$("#title").fadeOut();
 				$("#err").html();
+
 			},
 			success: function(data)
 		    {
@@ -21,6 +24,7 @@ $(document).ready(function (e) {
 					console.log(tab[1]);
 					console.log(tab[2]);
 					console.log(tab[3]);
+
 					if (tab[0]=='invalid') {
 						// invalid file format.
 						$("#err").html("Inscription None Valid").fadeIn();

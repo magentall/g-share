@@ -29,7 +29,7 @@ if(isset($_FILES['file']))
 		if(move_uploaded_file($tmp,$path))
 		{
 			echo $linkup;
-			echo $size;
+			//echo $size;
 		}
 		else
 		{

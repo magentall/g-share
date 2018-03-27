@@ -11,6 +11,7 @@ $(document).ready(function (e) {
 
 	$("#form-cnx").on('submit',(function(e) {
 		e.preventDefault();
+		
 		$.ajax({
         	url: "controller/cnx-ajax.php",
 			type: "POST",
@@ -23,12 +24,14 @@ $(document).ready(function (e) {
 				$("#err").html();
 				$('#connexionmodal').modal('hide');
 
+
 			},
 			success: function(data)
 		    {
 					console.log(data);
 					var tab = JSON.parse(data);
 					console.log(tab);
+
 					if(tab[0]==0)
 					{
 						// invalid file format.

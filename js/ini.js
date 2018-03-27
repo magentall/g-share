@@ -81,9 +81,9 @@ ajax_aff_history(tabinfo[0]);
 						else {
 							$("#legal").html('Clik here to LoGout');
 						}
-
-						if (data=='3m') {
-							alert('Max 3 Mo');
+//alert(data);
+						if (data=='') {
+							alert('SizE Max Reach, InvaLid FilE');
 						}else if (data=='7m') {
 							alert('Max 7 Mo');
 						}
